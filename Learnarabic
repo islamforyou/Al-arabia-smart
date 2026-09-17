@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العربیہ سمارٹ | Al-Arabia Smart Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #046c4e;
+            --secondary: #d4af37;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #0284c7;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', 'Amiri', sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #024c35);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary);
+            font-family: 'Amiri', serif;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        select, input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: #fff;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .option-card {
+            border: 2px solid #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .option-card:hover {
+            border-color: var(--primary);
+            background: #f0fdf4;
+        }
+        .btn-submit {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1.5rem;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #03543f;
+        }
+        .levels-section {
+            margin-top: 3rem;
+        }
+        .level-box {
+            background: #f1f5f9;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-right: 5px solid var(--secondary);
+        }
+        .level-box h3 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>العربیہ سمارٹ (Al-Arabia Smart)</h1>
+        <p>مدارس کے طلباء اور شائقینِ عربی کے لیے جدید ڈیجیٹل لرننگ پلیٹ فارم</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #ffd700;">إشراف: أبو واصف شاہد حسین مدنی سندھی</p>
+    </header>
+
+    <div class="container">
+        <!-- Onboarding Form -->
+        <section>
+            <h2>سچی شروعات: پروفائل اور رجسٹریشن</h2>
+            <form id="onboardingForm" onsubmit="event.preventDefault(); alert('خوش آمدید! آپ کا ڈیٹا محفوظ ہو گیا ہے، اب آپ ٹیسٹ یا لیسن شروع کر سکتے ہیں۔');">
+                
+                <div class="form-group">
+                    <label for="email">ای میل ایڈریس (Email Address):</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>آپ کی عمر کا گروپ کیا ہے؟</label>
+                    <select required>
+                        <option value="">-- عمر کا انتخاب کریں --</option>
+                        <option value="5-10">5 سے 10 سال</option>
+                        <option value="11-20">11 سے 20 سال</option>
+                        <option value="21-30">21 سے 30 سال</option>
+                        <option value="31-40">31 سے 40 سال</option>
+                        <option value="40+">40 سال سے زائد</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>آپ عربی کیوں سیکھنا چاہتے ہیں؟</label>
+                    <select required>
+                        <option value="">-- مقصد کا انتخاب کریں --</option>
+                        <option value="religious">دینی ضرورت (قرآن و حدیث، فقہ)</option>
+                        <option value="job">نوکری اور روزگار</option>
+                        <option value="travel">سیاحت</option>
+                        <option value="passion">شوق اور فصاحت</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>روزانہ کتنا وقت دے سکتے ہیں؟</label>
+                    <select required>
+                        <option value="">-- وقت کا انتخاب کریں --</option>
+                        <option value="10">10 منٹ روزانہ</option>
+                        <option value="20">20 منٹ روزانہ</option>
+                        <option value="30">30 منٹ یا اس سے زائد</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>آپ کس لیول سے آغاز کرنا چاہتے ہیں؟</label>
+                    <select required>
+                        <option value="placement">خودکار پلیسمنٹ ٹیسٹ (Placement Test) دیں</option>
+                        <option value="level0">میں بالکل ابتداء سے شروع کرنا چاہتا ہوں (Level 0)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">سفر کا آغاز کریں (Start Learning)</button>
+            </form>
+        </section>
+
+        <!-- Educational Structure -->
+        <section class="levels-section">
+            <h2>تعلیمی ڈھانچہ (5 اہم لیولز)</h2>
+            <div class="level-box">
+                <h3>Level 0: التمہیدی</h3>
+                <p>حروفِ تہجی، مخارج اور بنیادی الفاظ (Alphabet & Basic Vocabulary)</p>
+            </div>
+            <div class="level-box">
+                <h3>Level 1: الاعداديہ</h3>
+                <p>بنیادی گرامر، مذکر و مؤنث اور روزمرہ کے سادہ جملے۔</p>
+            </div>
+            <div class="level-box">
+                <h3>Level 2: الابتدائیہ</h3>
+                <p>جملہ سازی (مرکبِ مفید و ناقص) اور بنیادی تکلم (Speaking).</p>
+            </div>
+            <div class="level-box">
+                <h3>Level 3: المتوسطہ</h3>
+                <p>نثر (Prose)، دلچسپ کہانیاں اور روانی سے گفتگو۔</p>
+            </div>
+            <div class="level-box">
+                <h3>Level 4: المتقدمہ</h3>
+                <p>ادب، عربی شاعری (Poetry) اور فصیح وبلیغ عبارات۔</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 العربیہ سمارٹ (Al-Arabia Smart) - تمام حقوق محفوظ ہیں۔</p>
+    </footer>
+
+</body>
+</html>
